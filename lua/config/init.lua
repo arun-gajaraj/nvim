@@ -45,3 +45,5 @@ local opts = {
 require("lazy").setup('plugins', opts)
 require("ibl").setup()
 require('gitsigns').setup()
+require("toggleterm").setup()
+

@@ -14,7 +14,7 @@ local config = function()
           'buffers',
         },
       },
-      lualine_x = {'diff', 'encoding','fileformat','filetype'},
+      lualine_x = {'diff','branch', 'encoding','fileformat','filetype'},
       lualine_y = {'progress'},
       lualine_z = {'location'}
     }

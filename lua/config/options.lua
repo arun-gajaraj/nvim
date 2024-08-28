@@ -17,7 +17,8 @@ local opt = vim.opt
  opt.hlsearch = false
 
  -- Appearence
- opt.relativenumber = true
+ opt.number = true
+ opt.relativenumber = false
  opt.termguicolors = true
  -- opt.colorcolumn = true
  opt.signcolumn = "yes"

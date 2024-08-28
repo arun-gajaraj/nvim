@@ -24,3 +24,6 @@ keymap.set("v", ">", ">gv")
 -- Comments
 vim.api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false, desc = "Comment Line" })
 vim.api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false, desc = "Comment Line" })
+
+-- ToggleTerm
+-- keymap.set("n", "<C-\\")

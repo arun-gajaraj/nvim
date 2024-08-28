@@ -3,7 +3,12 @@ return {
     lazy = false,
     config = {
       filters = {
-        dotfiles = true,
+        -- dotfiles = true,
       },
+   update_cwd = true,
+   update_focused_file = {
+      enable = true,
+      update_cwd = false,
+   },
     },
 }
