@@ -1,47 +1,46 @@
 local opt = vim.opt
 
- -- Tab / Indentation
- 
- opt.tabstop = 2
- opt.shiftwidth = 2
- opt.softtabstop = 2
- opt.expandtab = true
- opt.smartindent = true
- opt.wrap = false
+-- Tab / Indentation
 
- -- Search
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
+opt.expandtab = true
+opt.smartindent = true
+opt.wrap = false
 
- opt.incsearch = true
- opt.ignorecase = true
- opt.smartcase = true
- opt.hlsearch = false
+-- Search
 
- -- Appearence
- opt.number = true
- opt.relativenumber = false
- opt.termguicolors = true
- -- opt.colorcolumn = true
- opt.signcolumn = "yes"
- opt.cmdheight = 1
- opt.scrolloff = 10
- opt.completeopt = "menuone,noinsert,noselect"
+opt.incsearch = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = false
 
+-- Appearence
+-- opt.number = true
+opt.relativenumber = true
+opt.termguicolors = true
+-- opt.colorcolumn = true
+opt.signcolumn = "yes"
+opt.cmdheight = 1
+opt.scrolloff = 10
+opt.completeopt = "menuone,noinsert,noselect"
 
- -- Behaviour
- opt.hidden = true
- opt.errorbells = true
- opt.swapfile = true
- opt.backup = false
- opt.undodir = vim.fn.expand("~/.config/nvim-undo-dir")
- opt.undofile = true
- opt.backspace = "indent,eol,start"
- 
- opt.splitright = true
- opt.splitbelow = true
- opt.autochdir = false
- opt.iskeyword:append("-")
- opt.mouse:append('a')
- opt.clipboard:append("unnamedplus")
- opt.modifiable = true
+-- Behaviour
+opt.hidden = true
+opt.errorbells = true
+opt.swapfile = true
+opt.backup = false
+opt.undodir = vim.fn.expand("~/.config/nvim-undo-dir")
+opt.undofile = true
+opt.backspace = "indent,eol,start"
 
- opt.encoding = "UTF-8"
+opt.splitright = true
+opt.splitbelow = true
+opt.autochdir = false
+opt.iskeyword:append("-")
+opt.mouse:append("a")
+opt.clipboard:append("unnamedplus")
+opt.modifiable = true
+
+opt.encoding = "UTF-8"

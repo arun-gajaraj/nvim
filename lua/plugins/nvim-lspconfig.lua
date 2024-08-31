@@ -60,6 +60,7 @@ local config = function()
 		on_attach = on_attach,
 		filetypes = {
 			"typescript",
+      "javascript"
 		},
 		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
 	})
@@ -77,6 +78,7 @@ local config = function()
 			"lua",
 			"python",
 			"typescript",
+			"javascript",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -94,7 +96,6 @@ local config = function()
 			},
 		},
 	})
-
 end
 
 return {

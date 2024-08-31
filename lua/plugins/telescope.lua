@@ -1,8 +1,7 @@
-
 local keymap = vim.keymap
 
 local config = function()
-	local telescope = require('telescope')
+	local telescope = require("telescope")
 	telescope.setup({
 		defaults = {
 			mappings = {
@@ -14,35 +13,33 @@ local config = function()
 		},
 		pickers = {
 			find_files = {
-				theme = "dropdown",
-				previewer = false,
-        hidden = true,
+				-- theme = "dropdown",
+				-- previewer = false,
+				-- hidden = true,
 			},
 			live_grep = {
-				theme = "dropdown",
-				previewer = false,
+				-- theme = "ivy",
+				-- previewer = true,
 			},
-      buffers = {
-				theme = "dropdown",
-				previewer = false,
-			}
 		},
 	})
-	end
 
+	telescope.load_extension("undo")
+	vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
+end
 
 return {
-  'nvim-telescope/telescope.nvim',
-  tag = '0.1.3',
-  lazy = false,
-	dependencies = { 'nvim-lua/plenary.nvim' },
+	"nvim-telescope/telescope.nvim",
+	tag = "0.1.3",
+	lazy = false,
+	dependencies = { "nvim-lua/plenary.nvim", "debugloop/telescope-undo.nvim" },
 	config = config,
 	keys = {
-      keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>"),
-      keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>"),
-      keymap.set("n", "<leader>ff", ":Telescope find_files<CR>"),
-      keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>"),
-      keymap.set("n", "<leader>fb", ":Telescope buffers<CR>"),
+		keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>"),
+		keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>"),
+		keymap.set("n", "<leader>ff", ":Telescope find_files<CR>"),
+		keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>"),
+		keymap.set("n", "<leader>fw", ":Telescope grep_string<CR>"),
+		keymap.set("n", "<leader>fb", ":Telescope buffers<CR>"),
 	},
 }
-

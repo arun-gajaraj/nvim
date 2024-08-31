@@ -28,7 +28,7 @@ local opts = {
 		lazy = true,
 	},
 	install = {
-		colorscheme = { "mellow" },
+		colorscheme = { "catppuccin" },
 	},
 	rtp = {
 		disabled_plugins = {
@@ -52,3 +52,4 @@ require("lazy").setup("plugins", opts)
 require("ibl").setup()
 require("gitsigns").setup()
 -- require("toggleterm").setup()
+require("diffview").setup()
