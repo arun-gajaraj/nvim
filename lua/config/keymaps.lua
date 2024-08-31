@@ -54,6 +54,10 @@ mapkey("<C-j>", "TmuxNavigateDown", "n", { desc = "Navigate Down" })
 mapkey("<C-k>", "TmuxNavigateUp", "n", { desc = "Navigate Up" })
 mapkey("<C-l>", "TmuxNavigateRight", "n", { desc = "Navigate Right" })
 
+-- symbols-outline
+
+mapkey("<leader>ou", "SymbolsOutline", "n", { desc = "Navigate Left" })
+
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n", { desc = "Split Vertically" })
 mapkey("<leader>sh", "split", "n", { desc = "Split Horizontally" })

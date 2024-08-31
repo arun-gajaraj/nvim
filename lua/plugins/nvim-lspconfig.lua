@@ -16,6 +16,12 @@ local config = function()
 	end
 
 	local capabilities = cmp_nvim_lsp.default_capabilities()
+
+	lspconfig.gopls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
+
 	-- lua
 	lspconfig.lua_ls.setup({
 		capabilities = capabilities,
@@ -60,7 +66,7 @@ local config = function()
 		on_attach = on_attach,
 		filetypes = {
 			"typescript",
-      "javascript"
+			"javascript",
 		},
 		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
 	})
@@ -71,6 +77,7 @@ local config = function()
 	local black = require("efmls-configs.formatters.black")
 	local eslint_d = require("efmls-configs.linters.eslint_d")
 	local prettier_d = require("efmls-configs.formatters.prettier_d")
+	local sql_formatter = require("efmls-configs.formatters.sql-formatter")
 
 	-- configure efm server
 	lspconfig.efm.setup({
@@ -79,6 +86,7 @@ local config = function()
 			"python",
 			"typescript",
 			"javascript",
+			"sql",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -93,6 +101,7 @@ local config = function()
 				lua = { luacheck, stylua },
 				python = { flake8, black },
 				typescript = { eslint_d, prettier_d },
+				sql = { sql_formatter },
 			},
 		},
 	})

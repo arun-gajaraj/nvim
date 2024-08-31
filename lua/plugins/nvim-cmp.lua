@@ -34,8 +34,10 @@ return {
 			-- configure lspkind for vs-code like icons
 			formatting = {
 				format = lspkind.cmp_format({
+					mode = "symbol_text",
 					maxwidth = 50,
 					ellipsis_char = "...",
+					show_labelDetails = true,
 				}),
 			},
 		})
@@ -49,6 +51,8 @@ return {
 			version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 			-- install jsregexp (optional!).
 			build = "make install_jsregexp",
+			dependencies = { "rafamadriz/friendly-snippets" },
 		},
+		{ "saadparwaiz1/cmp_luasnip", enabled = true },
 	},
 }

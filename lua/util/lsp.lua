@@ -20,6 +20,51 @@ M.on_attach = function(client, bufnr)
 	if client.name == "pyright" then
 		mapkey("<Leader>oi", "PyrightOrganizeImports", "n", opts)
 	end
+
+	if client.name == "gopls" then
+		client.server_capabilities.semanticTokensProvider = {
+			full = true,
+			legend = {
+				tokenTypes = {
+					"namespace",
+					"type",
+					"class",
+					"enum",
+					"interface",
+					"struct",
+					"typeParameter",
+					"parameter",
+					"variable",
+					"property",
+					"enumMember",
+					"event",
+					"function",
+					"method",
+					"macro",
+					"keyword",
+					"modifier",
+					"comment",
+					"string",
+					"number",
+					"regexp",
+					"operator",
+					"decorator",
+				},
+				tokenModifiers = {
+					"declaration",
+					"definition",
+					"readonly",
+					"static",
+					"deprecated",
+					"abstract",
+					"async",
+					"modification",
+					"documentation",
+					"defaultLibrary",
+				},
+			},
+		}
+	end
 end
 
 M.diagnostic_signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = "" }

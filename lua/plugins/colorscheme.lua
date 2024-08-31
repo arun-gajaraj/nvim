@@ -1,11 +1,11 @@
-return {
-	"mellow-theme/mellow.nvim",
-	lazy = false,
-	priority = 999,
-	config = function()
-		vim.cmd("colorscheme mellow")
-	end,
-}
+-- return {
+-- 	"mellow-theme/mellow.nvim",
+-- 	lazy = false,
+-- 	priority = 999,
+-- 	config = function()
+-- 		vim.cmd("colorscheme mellow")
+-- 	end,
+-- }
 
 -- return {
 -- 	"rose-pine/neovim",
@@ -26,3 +26,13 @@ return {
 -- 		require("vague").setup({})
 -- 	end,
 -- }
+
+return {
+	"catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
+	lazy = false,
+	config = function()
+		vim.cmd("colorscheme catppuccin")
+	end,
+}
