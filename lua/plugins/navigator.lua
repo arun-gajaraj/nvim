@@ -34,7 +34,7 @@ return {
                                             ":GoCoverage -p<CR>", {})
 
                 -- Opens test files
-                vim.api.nvim_buf_set_keymap(0, "n", "A",
+                vim.api.nvim_buf_set_keymap(0, "n", "T",
                                             ":lua require('go.alternate').switch(true, '')<CR>",
                                             {}) -- Test
                 vim.api.nvim_buf_set_keymap(0, "n", "V",
