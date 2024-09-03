@@ -5,6 +5,9 @@ return {
       filters = {
         -- dotfiles = true,
       },
+		view ={
+			width = 40,
+		},
    update_cwd = true,
    update_focused_file = {
       enable = true,

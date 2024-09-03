@@ -73,3 +73,10 @@ vim.api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false, desc = "Comment 
 -- vim.api.nvim_buf_del_keymap(0, 'n', 'gLeftMouse')
 -- vim.api.nvim_buf_set_keymap(0, 'n', '<leader>gI', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 mapkey("<leader>gI", "lua vim.lsp.buf.implementation()", "n", { desc = "Go to implementation" })
+
+-- Symbols Navigation
+mapkey("<leader>so", "SymbolsOutline", "n", { desc = "Open/Close Symbols pane"})
+
+-- Diff View Window
+mapkey("<leader>dvo", "DiffviewOpen", "n", { desc = "Open diff view"})
+mapkey("<leader>dvc", "DiffviewClose","n", { desc = "Close diff view"})

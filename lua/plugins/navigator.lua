@@ -17,7 +17,11 @@ return {
         require("go").setup()
         require("navigator").setup({
             lsp_signature_help = true, -- enable ray-x/lsp_signature
-            lsp = {format_on_save = true}
+            lsp = {
+					code_action = { enable = false },
+					-- code_lens_action = { enable = false },
+					format_on_save = true
+				}
         })
 
         vim.api.nvim_create_autocmd("FileType", {
@@ -25,24 +29,24 @@ return {
             callback = function(ev)
                 -- CTRL/control keymaps
                 vim.api
-                    .nvim_buf_set_keymap(0, "n", "<C-i>", ":GoImport<CR>", {})
-                vim.api.nvim_buf_set_keymap(0, "n", "<C-b>", ":GoBuild %:h<CR>",
+                    .nvim_buf_set_keymap(0, "n", "<C-I>", ":GoImport<CR>", {})
+                vim.api.nvim_buf_set_keymap(0, "n", "<C-B>", ":GoBuild %:h<CR>",
                                             {})
-                vim.api.nvim_buf_set_keymap(0, "n", "<C-t>", ":GoTestPkg<CR>",
+                vim.api.nvim_buf_set_keymap(0, "n", "<C-T>", ":GoTestPkg<CR>",
                                             {})
-                vim.api.nvim_buf_set_keymap(0, "n", "<C-c>",
+                vim.api.nvim_buf_set_keymap(0, "n", "<C-C>",
                                             ":GoCoverage -p<CR>", {})
 
                 -- Opens test files
-                vim.api.nvim_buf_set_keymap(0, "n", "T",
-                                            ":lua require('go.alternate').switch(true, '')<CR>",
-                                            {}) -- Test
-                vim.api.nvim_buf_set_keymap(0, "n", "V",
-                                            ":lua require('go.alternate').switch(true, 'vsplit')<CR>",
-                                            {}) -- Test Vertical
-                vim.api.nvim_buf_set_keymap(0, "n", "S",
-                                            ":lua require('go.alternate').switch(true, 'split')<CR>",
-                                            {}) -- Test Split
+                -- vim.api.nvim_buf_set_keymap(0, "n", "T",
+                --                             ":lua require('go.alternate').switch(true, '')<CR>",
+                --                             {}) -- Test
+                -- vim.api.nvim_buf_set_keymap(0, "n", "V",
+                --                             ":lua require('go.alternate').switch(true, 'vsplit')<CR>",
+                --                             {}) -- Test Vertical
+                -- vim.api.nvim_buf_set_keymap(0, "n", "S",
+                --                             ":lua require('go.alternate').switch(true, 'split')<CR>",
+                --                             {}) -- Test Split
             end,
             group = vim.api.nvim_create_augroup("go_autocommands",
                                                 {clear = true})

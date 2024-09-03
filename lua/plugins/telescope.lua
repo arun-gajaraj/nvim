@@ -22,7 +22,9 @@ return {
             "nvim-telescope/telescope-fzf-native.nvim",
             build = "make",
             enabled = true
-        }, {"nvim-telescope/telescope-file-browser.nvim", enabled = true}
+        }, 
+        {"nvim-telescope/telescope-file-browser.nvim", enabled = true},
+	     {'nvim-telescope/telescope-symbols.nvim'}, 
     },
     branch = "0.1.x",
     config = function()
@@ -79,6 +81,6 @@ return {
 		keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 		keymap.set("n", "<leader>fw", ":Telescope grep_string<CR>", opts)
 		keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-		keymap.set("n", "<leader>so", ":Telescope lsp_document_symbols<CR>", opts)
+		-- keymap.set("n", "<leader>so", ":Telescope lsp_document_symbols<CR>", opts)
     end
 }
