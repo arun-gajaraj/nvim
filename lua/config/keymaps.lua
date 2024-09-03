@@ -1,6 +1,6 @@
 -- local keymap = vim.keymap
 --
--- local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 --
 -- -- Directory Navigation
 -- keymap.set("n","<leader>m",":NvimTreeFocus<CR>", opts)
@@ -69,3 +69,7 @@ mapkey("<leader>pa", "echo expand('%:p')", "n", { desc = "Show Full File Path" }
 -- Comments
 vim.api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false, desc = "Comment Line" })
 vim.api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false, desc = "Comment Line" })
+
+-- vim.api.nvim_buf_del_keymap(0, 'n', 'gLeftMouse')
+-- vim.api.nvim_buf_set_keymap(0, 'n', '<leader>gI', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+mapkey("<leader>gI", "lua vim.lsp.buf.implementation()", "n", { desc = "Go to implementation" })
