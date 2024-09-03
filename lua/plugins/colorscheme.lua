@@ -52,10 +52,14 @@
 -- }
 return {
 	{
-		"folke/tokyonight.nvim"
+		"folke/tokyonight.nvim",
 	},{
 		"shaunsingh/nord.nvim",
 	},{
-		"catppuccin/nvim"
+		"catppuccin/nvim",
+	},{
+		"nyoom-engineering/oxocarbon.nvim",
+	},{
+		"NLKNguyen/papercolor-theme",
 	},
 }

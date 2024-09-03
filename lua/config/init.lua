@@ -22,4 +22,4 @@ require("lazy").setup({{import = "plugins"}}, {
 })
 
 vim.cmd.colorscheme('nord')
-vim.o.guicursor="n-v-c-sm:block,i-ci:ver25-blinkwait700-blinkoff400-blinkon250,r-cr-o:hor20"
+vim.o.guicursor="n-v-c-sm:block-blinkwait700-blinkoff400-blinkon250,i-ci:ver25-blinkwait700-blinkoff400-blinkon250,r-cr-o:hor20"
