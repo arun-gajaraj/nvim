@@ -80,3 +80,6 @@ mapkey("<leader>so", "SymbolsOutline", "n", { desc = "Open/Close Symbols pane"})
 -- Diff View Window
 mapkey("<leader>dvo", "DiffviewOpen", "n", { desc = "Open diff view"})
 mapkey("<leader>dvc", "DiffviewClose","n", { desc = "Close diff view"})
+
+-- Undo Tree
+mapkey("<leader>U", "UndotreeToggle", "n", { desc = "Undotree Toggle"})

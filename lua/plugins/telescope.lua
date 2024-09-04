@@ -1,18 +1,18 @@
 
-local sorters = require('telescope.sorters')
-
--- Custom sorter function
-local function custom_sorter()
-  return sorters.Sorter:new{
-    scoring_function = function(_, prompt, line)
-      if line:match("_mock") or line:match("_test") then
-        return 1000000 -- Assign a high score to push these files to the end
-      end
-      -- Default sorter logic
-      return sorters.get_fzy_sorter().scoring_function(_, prompt, line)
-    end,
-  }
-end
+-- local sorters = require('telescope.sorters')
+--
+-- -- Custom sorter function
+-- local function custom_sorter()
+--   return sorters.Sorter:new{
+--     scoring_function = function(_, prompt, line)
+--       if line:match("_mock") or line:match("_test") then
+--         return 1000000 -- Assign a high score to push these files to the end
+--       end
+--       -- Default sorter logic
+--       return sorters.get_fzy_sorter().scoring_function(_, prompt, line)
+--     end,
+--   }
+-- end
 
 return {
     "nvim-telescope/telescope.nvim",
@@ -35,7 +35,7 @@ return {
             defaults = {
 						file_ignore_patterns = {"vendor/"},
                 sorting_strategy = "ascending",
-					sorter = custom_sorter(),
+					-- sorter = custom_sorter(),
                 layout_strategy = "horizontal",
                 layout_config = {prompt_position = "top"},
                 mappings = {
