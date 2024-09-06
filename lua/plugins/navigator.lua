@@ -29,7 +29,7 @@ return {
             callback = function(ev)
                 -- CTRL/control keymaps
                 vim.api
-                    .nvim_buf_set_keymap(0, "n", "<C-I>", ":GoImport<CR>", {})
+                    .nvim_buf_set_keymap(0, "n", "<C-gi>", ":GoImport<CR>", {})
                 vim.api.nvim_buf_set_keymap(0, "n", "<C-B>", ":GoBuild %:h<CR>",
                                             {})
                 vim.api.nvim_buf_set_keymap(0, "n", "<C-T>", ":GoTestPkg<CR>",
