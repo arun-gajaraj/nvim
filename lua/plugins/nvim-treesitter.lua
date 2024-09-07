@@ -5,7 +5,8 @@ return {
         {"nvim-treesitter/nvim-treesitter-textobjects"}, -- Syntax aware text-objects
         {
             "nvim-treesitter/nvim-treesitter-context", -- Show code context
-            opts = {enable = true, mode = "topline", line_numbers = true}
+            opts = {enable = true, mode = "topline", line_numbers = true},
+				lazy = false,
         }
     },
     config = function()

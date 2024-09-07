@@ -25,6 +25,7 @@ return {
         }, 
         {"nvim-telescope/telescope-file-browser.nvim", enabled = true},
 	     {'nvim-telescope/telescope-symbols.nvim'}, 
+			{"blacktrub/telescope-godoc.nvim"},
     },
     branch = "0.1.x",
     config = function()
@@ -67,6 +68,7 @@ return {
 
         -- telescope.load_extension("fzf")
         -- telescope.load_extension("file_browser")
+			require("telescope").load_extension("godoc")
 
         local builtin = require("telescope.builtin")
 

@@ -11,7 +11,9 @@ local config = function()
 			lualine_a = { "mode" },
 			lualine_b = {
 				{
-					"buffers",
+					-- "buffers",
+					"filename",
+					path = 1
 				},
 			},
 			lualine_x = { "diff", "branch", "encoding", "fileformat", "filetype" },

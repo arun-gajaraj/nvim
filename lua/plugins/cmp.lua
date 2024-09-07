@@ -87,5 +87,9 @@ return {
 
         -- https://phpactor.readthedocs.io/en/master/usage/standalone.html#installation
         lspconfig["phpactor"].setup {}
+
+			lspconfig["ts_ls"].setup {}
+
+			lspconfig["jsonls"].setup{}
     end
 }
