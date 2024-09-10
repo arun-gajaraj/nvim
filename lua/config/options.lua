@@ -39,3 +39,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "javascript",
+    command = "setlocal commentstring=//\\ %s"
+})
