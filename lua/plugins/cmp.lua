@@ -12,6 +12,8 @@ return {
             config = function()
                 require("luasnip.loaders.from_vscode").lazy_load()
                 -- https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/go.json
+					require('luasnip').filetype_extend("javascript", { "javascriptreact" })
+					require('luasnip').filetype_extend("javascript", { "html" })
             end
         }, {"saadparwaiz1/cmp_luasnip", enabled = true}
     },

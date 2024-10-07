@@ -61,5 +61,11 @@ return {
 		"nyoom-engineering/oxocarbon.nvim",
 	},{
 		"NLKNguyen/papercolor-theme",
-	},
+	},{
+		"AlexvZyl/nordic.nvim",
+	},{
+		"rose-pine/neovim",
+	},{
+		"rebelot/kanagawa.nvim",
+		}
 }

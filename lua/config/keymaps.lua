@@ -75,7 +75,7 @@ vim.api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false, desc = "Comment 
 mapkey("<leader>gI", "lua vim.lsp.buf.implementation()", "n", { desc = "Go to implementation" })
 mapkey("<leader>ca", "lua vim.lsp.buf.code_action()", "n", { desc = "lsp code action"})
 mapkey("<leader>F", "lua vim.lsp.buf.format()", "n", { desc = "format"})
-mapkey("<leader>ip", "GoImport", "n", { desc = "Go Import"})
+mapkey("<leader>ip", "GoImports", "n", { desc = "Go Import"})
 
 -- Symbols Navigation
 mapkey("<leader>so", "SymbolsOutline", "n", { desc = "Open/Close Symbols pane"})
@@ -87,3 +87,6 @@ mapkey("<leader>dvc", "DiffviewClose","n", { desc = "Close diff view"})
 -- Undo Tree
 mapkey("<leader>U", "UndotreeToggle", "n", { desc = "Undotree Toggle"})
 
+
+-- luasnip
+mapkey("<leader>ls", "Telescope luasnip", "n", { desc = "Luasnip Snippets Picker" })
