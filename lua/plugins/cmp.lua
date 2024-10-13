@@ -14,6 +14,16 @@ return {
                 -- https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/go.json
 					require('luasnip').filetype_extend("javascript", { "javascriptreact" })
 					require('luasnip').filetype_extend("javascript", { "html" })
+
+				  require'lspconfig'.rust_analyzer.setup{
+					 settings = {
+						['rust-analyzer'] = {
+						  diagnostics = {
+							 enable = false;
+						  }
+						}
+					 }
+				  }
             end
         }, {"saadparwaiz1/cmp_luasnip", enabled = true}
     },
