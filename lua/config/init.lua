@@ -23,7 +23,7 @@ require("lazy").setup({{import = "plugins"}}, {
 
 -- vim.cmd.colorscheme('kanagawa-dragon')
 -- vim.opt.background="light"
-vim.cmd.colorscheme('catppuccin-mocha')
-vim.api.nvim_set_hl(0,"Normal", {bg = "#181825"})
+vim.cmd.colorscheme('nordic')
+-- vim.api.nvim_set_hl(0,"Normal", {bg = "#181825"})
 vim.opt.spell=false
 vim.o.guicursor="n-v-c-sm:block-blinkwait700-blinkoff400-blinkon250,i-ci:ver25-blinkwait700-blinkoff400-blinkon250,r-cr-o:hor20"
